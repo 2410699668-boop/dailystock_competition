@@ -1,0 +1,19 @@
+{
+  "name": "stock-competition-supabase-collab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-config.mjs && node scripts/build-app.mjs && node scripts/validate.mjs",
+    "dev": "npm run build && netlify dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
