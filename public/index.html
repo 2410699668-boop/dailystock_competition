@@ -55,7 +55,7 @@
     </section>
 
     <section class="page" id="page-picks">
-      <div class="page-head"><div><h2>每日选股</h2><p>输入代码后自动获取名称、当前价和板块。</p></div><div class="toolbar"><select class="shared-select" id="roundSelectPicks" onchange="setSharedRound(this.value)"></select><button class="btn btn-primary" onclick="openPickModal()">录入选股</button><button class="btn" onclick="refreshRoundQuotes()">刷新行情</button></div></div>
+      <div class="page-head"><div><h2>每日选股</h2><p>输入代码后自动获取名称、当前价和板块。</p></div><div class="toolbar"><select class="shared-select" id="roundSelectPicks" onchange="setSharedRound(this.value)"></select><button class="btn btn-primary" onclick="openPickModal()">录入选股</button><button class="btn" id="analyzeAllBtn" onclick="analyzeAllPicks()">分析全部</button><button class="btn" onclick="refreshRoundQuotes()">刷新行情</button><span class="batch-status" id="analysisBatchStatus"></span></div></div>
       <div class="card"><div id="picksTable"></div></div>
     </section>
 

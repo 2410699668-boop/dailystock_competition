@@ -25,6 +25,12 @@ if (!html.includes('id="app"') || !html.includes('src="/config.js"') || !html.in
 if (!app.includes('from "@supabase/supabase-js"') || !app.includes('competition_state')) {
   throw new Error("Supabase 前端同步模块不完整");
 }
+if (!html.includes('id="analyzeAllBtn"') || !app.includes('function analyzeAllPicks')) {
+  throw new Error("每日选股的“分析全部”功能缺失");
+}
+if (!app.includes('function participantStyleProfile') || !app.includes('function participantEquitySVG')) {
+  throw new Error("选手风格画像或个人累计收益曲线缺失");
+}
 if (!schema.includes("enable row level security") || !schema.includes("supabase_realtime")) {
   throw new Error("Supabase SQL 缺少 RLS 或 Realtime 配置");
 }
