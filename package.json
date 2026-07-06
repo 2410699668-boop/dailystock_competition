@@ -4,16 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/generate-config.mjs && node scripts/build-app.mjs && node scripts/validate.mjs",
-    "dev": "npm run build && netlify dev"
+    "build": "npm run check:registry && node scripts/generate-config.mjs && node scripts/build-app.mjs && node scripts/validate.mjs",
+    "dev": "npm run build && netlify dev",
+    "check:registry": "node scripts/check-registry.mjs"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.57.4"
+    "@supabase/supabase-js": "2.110.0"
   },
   "devDependencies": {
-    "esbuild": "^0.25.10"
+    "esbuild": "0.25.12"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22 <25"
   }
 }
