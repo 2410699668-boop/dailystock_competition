@@ -1,0 +1,1 @@
+# dailystock_competition
